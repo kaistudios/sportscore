@@ -1,0 +1,30 @@
+<div class='stabs'>
+<script language="javascript" type="text/javascript">
+function jump(form) {
+var myindex=form.menu.selectedIndex
+if (form.menu.options[myindex].value != "0") 
+{
+window.open(form.menu.options[myindex].value, 
+target="scorediv");
+}
+}
+//-->
+</script>
+<form name="lissamenu2" ACTION=URI>
+<select name="menu" onchange="jump(this.form)">
+  <option value="football.html" target="resultsscore" selected="selected">Scores1</option>
+  <option value="livescore2.html" target="resultsscore">Scores2</option>
+  <option value="livescore3.html" target="resultsscore">Scores3</option>
+  <option value="livescore4.html" target="resultsscore">Scores4</option>
+  <option value="livescore5.html" target="resultsscore">Scores5</option>
+  <!--<ul>
+  <li><a href="football.html" target="scorediv">Scores1</a> </li> 
+  <li><a href="livescore2.html" target="scorediv">Scores2</a> </li> 
+  <li><a href="livescore3.html" target="scorediv">Scores3</a> </li> 
+  <li><a href="livescore4.html" target="scorediv">Scores4</a></li>
+</ul>--></select></form></div>
+<div id="resultsscore">
+  <iframe name="scorediv" src="http://www.goals365.com/feed/user1002/" width="525" height="350" scrolling="auto" align="top" frameborder="0">Your browser does not support frames, so you will not be able to view this page.</iframe>
+  <!--
+<iframe src="http://www.goals365.com/feed/soccer/index.php" width="525" height="450" scrolling="auto" align="top" frameborder="0">Your browser does not support frames, so you will not be able to view this page.</iframe> http://www.goals365.com/feed/user1025/-->
+</div>

@@ -36,6 +36,22 @@ $(window).load(function () {
         load_stream2_tab();
       }
     });
+	
+/*	$("#stream3").click( function() {
+      if($("#stream3").hasClass("selected")){
+        return false;
+      } else {
+        load_stream3_tab();
+      }
+    });*/
+	
+	$("#stream4").click( function() {
+      if($("#stream4").hasClass("selected")){
+        return false;
+      } else {
+        load_stream4_tab();
+      }
+    });
 		
 	$("#score").click(function (){
       if($("#score").hasClass("selected")){
@@ -93,6 +109,14 @@ $(window).load(function () {
       }
     });
 	
+	$("#golf").click(function (){
+      if($("#golf").hasClass("selected")){
+        return false;
+      } else {
+        load_golf_tab();
+      }
+    });
+	
 	$("#racing").click(function (){
       if($("#racing").hasClass("selected")){
         return false;
@@ -101,10 +125,18 @@ $(window).load(function () {
       }
     });
 	
+	$("#worldcup").click( function() {
+      if($("#worldcup").hasClass("selected")){
+        return false;
+      } else {
+        load_worldcup_tab();
+      }
+    });
+	
 	function load_score_tab()
     {
-      if($("#media, #stream, #stream2, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").hasClass("selected")){
-        $("#media, #stream, #stream2, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").removeClass("selected");
+      if($("#media, #stream, #stream2, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #stream, #stream2, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#score").addClass("selected");
@@ -116,8 +148,8 @@ $("#frame-div *").remove();
         }
 		function load_basketball_tab()
     {
-      if($("#media, #stream, #stream2, #score, #football, #baseball, #tennis, #cricket, #racing, #hockey").hasClass("selected")){
-        $("#media, #stream, #stream2, #score, #football, #baseball, #tennis, #cricket, #racing, #hockey").removeClass("selected");
+      if($("#media, #stream, #stream2, #stream3, #stream4, #score, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #stream, #stream2, #stream3, #stream4, #score, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#basketball").addClass("selected");
@@ -130,8 +162,8 @@ $("#frame-div *").remove();
 	
 	function load_stream_tab()
     {
-      if($("#media, #score, #stream2, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").hasClass("selected")){
-        $("#media, #score, #stream2, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").removeClass("selected");
+      if($("#media, #score, #stream2, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream2, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#stream").addClass("selected");
@@ -145,8 +177,8 @@ $("#results *").fadeIn();
 	
 	function load_stream2_tab()
     {
-      if($("#media, #score, #stream, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").hasClass("selected")){
-        $("#media, #score, #stream, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").removeClass("selected");
+      if($("#media, #score, #stream, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#stream2").addClass("selected");
@@ -158,14 +190,44 @@ $("#results *").fadeIn();
 
     }
 	
+	/*function load_stream3_tab()
+    {
+      if($("#media, #score, #stream, #stream2, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream, #stream2, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
+$("#frame-div *").remove();
+      }
+      $("#stream3").addClass("selected");
+      $( "#frame-div" ).load( "livestreams3.html" );
+    
+
+$("#results *").fadeIn();
+            $(".entry-div").hide();
+
+    }*/
+	
+	function load_stream4_tab()
+    {
+      if($("#media, #score, #stream, #stream2, #stream3, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream, #stream2, #stream3, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
+$("#frame-div *").remove();
+      }
+      $("#stream4").addClass("selected");
+      $( "#frame-div" ).load( "livestreams4.html" );
+    
+
+$("#results *").fadeIn();
+            $(".entry-div").hide();
+
+    }
+	
 	function load_football_tab()
     {
-      if($("#media, #score, #stream, #stream2, #basketball, #baseball, #tennis, #cricket, #racing, #hockey").hasClass("selected")){
-        $("#media, #score, #stream, #stream2, #basketball, #baseball, #tennis, #cricket, #racing, #hockey").removeClass("selected");
+      if($("#media, #score, #stream, #stream2, #stream3, #stream4, #basketball, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream, #stream2, #stream3, #stream4, #basketball, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#football").addClass("selected");
-      $( "#frame-div" ).load("football.html" );
+      $( "#frame-div" ).load("http://www.goals365.com/feed/soccer/index.php" );
 
 $("#results *").fadeIn();
             $(".entry-div").hide();
@@ -174,8 +236,8 @@ $("#results *").fadeIn();
 	
 	function load_baseball_tab()
     {
-      if($("#media, #score, #basketball, #football, #tennis, #cricket, #racing, #hockey, #stream, #stream2").hasClass("selected")){
-        $("#media, #score, #basketball, #football, #tennis, #cricket, #racing, #hockey, #stream, #stream2").removeClass("selected");
+      if($("#media, #score, #basketball, #football, #tennis, #cricket, #golf, #racing, #worldcup, #hockey, #stream, #stream2").hasClass("selected")){
+        $("#media, #score, #basketball, #football, #tennis, #cricket, #golf, #racing, #worldcup, #hockey, #stream, #stream2").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#baseball").addClass("selected");
@@ -188,8 +250,8 @@ $("#results *").fadeIn();
 		
 			function load_tennis_tab()
     {
-      if($("#media, #score, #basketball, #football, #baseball, #cricket, #racing, #hockey, #stream, #stream2").hasClass("selected")){
-        $("#media, #score, #basketball, #football, #baseball, #cricket, #racing, #hockey, #stream, #stream2").removeClass("selected");
+      if($("#media, #score, #basketball, #football, #baseball, #cricket, #golf, #racing, #worldcup, #hockey, #stream, #stream2").hasClass("selected")){
+        $("#media, #score, #basketball, #football, #baseball, #cricket, #golf, #racing, #worldcup, #hockey, #stream, #stream2").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#tennis").addClass("selected");
@@ -216,8 +278,8 @@ $("#results *").fadeIn();
 		
 	function load_hockey_tab()
     {
-      if($("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #racing, #stream, #stream2").hasClass("selected")){
-        $("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #racing, #stream, #stream2").removeClass("selected");
+      if($("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #stream, #stream2").hasClass("selected")){
+        $("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #stream, #stream2").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#hockey").addClass("selected");
@@ -228,10 +290,24 @@ $("#results *").fadeIn();
             
         }
 		
+		function load_golf_tab()
+    {
+      if($("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #hockey, #racing, #worldcup, #stream, #stream2").hasClass("selected")){
+        $("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #hockey, #racing, #worldcup, #stream, #stream2").removeClass("selected");
+$("#frame-div *").remove();
+      }
+      $("#golf").addClass("selected");
+      $( "#frame-div" ).load( "golf.html" );
+    
+$("#results *").fadeIn();
+            $(".entry-div").hide();
+            
+        }
+		
 	function load_racing_tab()
     {
-      if($("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #stream, #stream2").hasClass("selected")){
-        $("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #stream, #stream2").removeClass("selected");
+      if($("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #hockey, #golf, #worldcup, #stream, #stream2").hasClass("selected")){
+        $("#media, #score, #basketball, #football, #baseball, #tennis, #cricket, #hockey, #golf, #worldcup, #stream, #stream2").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#racing").addClass("selected");
@@ -241,15 +317,29 @@ $("#results *").fadeIn();
             $(".entry-div").hide();
             
         }
+		
+		function load_worldcup_tab()
+    {
+      if($("#media, #score, #stream, #stream2, #stream3, #stream4, #basketball, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream, #stream2, #stream3, #stream4, #basketball, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
+$("#frame-div *").remove();
+      }
+      $("#worldcup").addClass("selected");
+      $( "#frame-div" ).load("world-cup.html" );
+
+$("#results *").fadeIn();
+            $(".entry-div").hide();
+            
+    }
 
     function load_main_tab()
     {
-      if($("#media, #score, #stream, #stream2, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").hasClass("selected")){
-        $("#media, #score, #stream, #stream2, #basketball, #football, #baseball, #tennis, #cricket, #racing, #hockey").removeClass("selected");
+      if($("#media, #score, #stream, #stream2, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").hasClass("selected")){
+        $("#media, #score, #stream, #stream2, #stream3, #stream4, #basketball, #football, #baseball, #tennis, #cricket, #golf, #racing, #worldcup, #hockey").removeClass("selected");
 $("#frame-div *").remove();
       }
       $("#main").addClass("selected");
-      var url = "http://www.scorespro.com/rss2/live-soccer.xml";
+      var url = "http://www.goals365.com/feed/soccer/index.php";
     
       $.ajax({
         url: 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
@@ -281,5 +371,5 @@ $("#results *").fadeIn();
         }
       });
     }
-		 load_stream_tab();
+		 load_score_tab();
 	 });
